@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aFs-ol-qY2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AAPLPlayerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkp-Uy-5EM" customClass="AAPLPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fkp-Uy-5EM" secondAttribute="trailing" id="DZR-Gi-5dp"/>
+                            <constraint firstItem="fkp-Uy-5EM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fb9-F2-O70"/>
+                            <constraint firstItem="fkp-Uy-5EM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nLd-Id-wlc"/>
+                            <constraint firstItem="fkp-Uy-5EM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="uJ8-KW-lyf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="fkp-Uy-5EM" id="4SB-40-3hb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="wWH-wU-gyW">
+            <objects>
+                <viewController id="aFs-ol-qY2" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20l-dj-EHF"/>
+                        <viewControllerLayoutGuide type="bottom" id="dq9-iZ-QhY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n3D-tP-0aP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-y9-p5Q">
+                                <rect key="frame" x="283" y="562" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="OnStartStop:" destination="aFs-ol-qY2" eventType="touchUpInside" id="PgH-Em-5Zl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dq9-iZ-QhY" firstAttribute="top" secondItem="nOx-y9-p5Q" secondAttribute="bottom" constant="8" id="RmX-KM-CGm"/>
+                            <constraint firstItem="nOx-y9-p5Q" firstAttribute="centerX" secondItem="n3D-tP-0aP" secondAttribute="centerX" id="aCR-0T-RUo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="StartStopButton" destination="nOx-y9-p5Q" id="8vM-dM-KnB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c37-ou-iJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1141"/>
+        </scene>
+    </scenes>
+</document>

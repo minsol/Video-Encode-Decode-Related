@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:RealTimeFilter/RealTimeFilter.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FaceDetection/FaceDetection.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ComplexFilters/ComplexFilters.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SimpleFilters/SimpleFilters.xcodeproj">
+   </FileRef>
+</Workspace>
